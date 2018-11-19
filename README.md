@@ -26,24 +26,18 @@ new Vue({
   components: {PhoneMask}
 })
 
-// add component to the template with @input event handler to get the value
+// add component to the template with v-model="value" to sync the value with your data
 <template>
-  <PhoneMask @input="getValue"></PhoneMask>
+  <PhoneMask v-model="value"></PhoneMask>
 </template>
 
-// create event handler method in Vue instanse
-methods: {
-  getValue(value) {
-    console.log(value);
-  }
-}
 ```
 
 ## Properties and handlers
 
 | Property/handler| Required | Type                    | Default | Description                                |
 |-----------------|----------|-------------------------|---------|--------------------------------------------|
-| @input          | true     | Method                  |   --    | Set event handler to get the 'value'       |
+| @change         | false    | Method                  |   --    | Set handler for changes                    |
 | lang            | false    | String                  |   RU    | Set language RU/EN.                        |
 | showRegion      | false    | Boolean                 |   true  | Show region name                           |
 
@@ -51,6 +45,16 @@ Example:
 ```javascript
 // set component language to english
 <PhoneMask @input="getValue" lang="EN"></PhoneMask>
+```
+## Styling
+
+Component class name is 'vue-multi-mask-component'
+```javascript
+// template structure
+<div class="vue-multi-mask-component">
+    <input></input>  // phone input
+    <p></p>          // region data
+</div>
 ```
 
 ## Dependencies

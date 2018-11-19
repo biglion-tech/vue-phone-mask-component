@@ -1,5 +1,5 @@
 <template>
-    <div class="phone-mask">
+    <div class="vue-multi-mask-component">
         <input
                 type="text"
                 ref="phoneField"
