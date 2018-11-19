@@ -6,8 +6,10 @@
                 @keydown="masksKeyDown"
                 @keypress="masksKeyPress"
                 @paste="masksPaste"
-                @cut="masksPaste" 
-                @input="$emit('input', $event.target.value)">
+                @cut="masksPaste"
+                :value="value"
+                @input="$emit('input', $event.target.value)"
+                @change="$emit('change')">
         <template v-if="showRegion">        
             <p v-if="lang === 'RU'">Регион: {{ hint }}</p>
             <p v-else>Region: {{ hint }}</p>
@@ -28,6 +30,9 @@
             showRegion: {
                 type: Boolean,
                 default: true
+            },
+            value: {
+                type: String
             }
         },
         mounted() {
