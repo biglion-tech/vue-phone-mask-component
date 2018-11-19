@@ -18,7 +18,7 @@ npm i vue-multi-mask-component
 
 ```javascript
 // import the component
-import PhoneMask from 'vue-multi-mask-component-test'
+import PhoneMask from 'vue-multi-mask-component'
 
 // register it in your app
 new Vue({
