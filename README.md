@@ -44,7 +44,7 @@ new Vue({
 Example:
 ```javascript
 // set component language to english
-<PhoneMask @input="getValue" lang="EN"></PhoneMask>
+<PhoneMask lang="EN"></PhoneMask>
 ```
 ## Styling
 
