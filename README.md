@@ -10,7 +10,7 @@ Russian and English support(see Properties section).
 ## Install
 
 ```
-npm i vue-multi-mask-component-test
+npm i vue-multi-mask-component
 
 ```
 
