@@ -1,19 +1,20 @@
 {
-  "name": "vue-phone-mask-component",
-  "version": "1.0.0",
-  "description": "A Vue.js phone mask component(multi regions)",
-  "main": "dist/vue-phone-mask.js",
+  "name": "vue-multi-mask-component-test",
+  "version": "1.0.24",
+  "description": "phone mask multi",
+  "keywords": [
+    "vue",
+    "phone mask",
+    "multi"
+  ],
+  "main": "dist/vue-phone-mask-component.js",
   "scripts": {
     "build": "rimraf ./dist && webpack --config ./webpack.config.js"
   },
-  "author": "Biglion tech",
+  "author": "Biglion Tech",
   "license": "MIT",
   "dependencies": {
-    "inputmask": "^4.0.2"
-  },
-  "repository": {
-    "type": "git",
-    "url": ""
+    "inputmask": "^4.0.3"
   },
   "devDependencies": {
     "babel-core": "^6.10.4",

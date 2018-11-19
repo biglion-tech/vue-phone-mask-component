@@ -1,10 +1,12 @@
 const webpack = require('webpack');
-const merge = require('webpack-merge');
 const path = require('path');
 
-let config = {
+module.exports = {
+  entry: path.resolve(__dirname + '/src/PhoneMask.vue'),
   output: {
     path: path.resolve(__dirname + '/dist/'),
+    filename: 'vue-phone-mask-component.js',
+    libraryTarget: 'umd',
   },
   module: {
     loaders: [
@@ -18,11 +20,14 @@ let config = {
         test: /\.vue$/,
         loader: 'vue'
       },
-        {
-            test: /\.css$/,
-            loader: 'style!less!css'
-        }
+      {
+        test: /\.css$/,
+        loader: 'style!less!css'
+      }
     ]
+  },
+  externals: {
+    inputmask: 'inputmask'
   },
   plugins: [
     new webpack.optimize.UglifyJsPlugin( {
@@ -32,27 +37,6 @@ let config = {
       compress: {
         warnings: false
       }
-    } )
+    })
   ]
 };
-
-
-module.exports = [
-  merge(config, {
-    entry: path.resolve(__dirname + '/src/plugin.js'),
-    output: {
-      filename: 'vue-phone-mask.min.js',
-      libraryTarget: 'window',
-      library: 'VuePhoneMask',
-    }
-  }),
-  merge(config, {
-    entry: path.resolve(__dirname + '/src/PhoneMask.vue'),
-    output: {
-      filename: 'vue-phone-mask.js',
-      libraryTarget: 'umd',
-      library: 'vue-phone-mask',
-      umdNamedDefine: true
-    }
-  })
-];
