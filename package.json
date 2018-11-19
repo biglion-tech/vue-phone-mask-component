@@ -1,11 +1,11 @@
 {
   "name": "vue-multi-mask-component",
   "version": "1.0.0",
-  "description": "phone mask multi",
+  "description": "phone mask multi vue component",
   "keywords": [
     "vue",
     "phone mask",
-    "multi"
+    "multi mask"
   ],
   "main": "dist/vue-phone-mask-component.js",
   "scripts": {
@@ -13,6 +13,10 @@
   },
   "author": "Biglion Tech",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/biglion-tech/vue-phone-mask-component"
+  },
   "dependencies": {
     "inputmask": "^4.0.3"
   },
